@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: apiapp1
+  labels:
+    name: apiapp1
+spec:
+  containers:
+  - name: apiapp1
+    image: apiapp1:latest
+    imagePullPolicy: IfNotPresent
+    ports:
+      - containerPort: 80
+        name: web
