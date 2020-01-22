@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Prometheus;
 
 namespace ApiApp1
 {
@@ -36,6 +37,9 @@ namespace ApiApp1
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseMetricServer();
+            app.UseHttpMetrics();
 
             app.UseRouting();
 

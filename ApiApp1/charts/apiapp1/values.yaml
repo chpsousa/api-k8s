@@ -1,6 +1,10 @@
 # Default values for apiapp1.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+paths: 
+  - /apiapp1
+  
+port: 80
 
 replicaCount: 1
 
@@ -35,7 +39,7 @@ service:
   port: 8888
 
 ingress:
-  enabled: true
+  enabled: false
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
